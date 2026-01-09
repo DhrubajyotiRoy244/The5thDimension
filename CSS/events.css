@@ -205,12 +205,12 @@ transform: rotate(360deg);
 } */
 .container .event:hover {
     img {
-        transform: rotate(360deg) translateY(-50%) scale(1.15);
+        transform: /*rotate(360deg)*/ translateY(-50%) scale(1.15);
         /* transform: translateX(-40%); */
     }
 
     p {
-        transform: rotate(-360deg) translateY(65%) scale(1.15);
+        transform:/* rotate(-360deg)*/ translateY(65%) scale(1.15);
     }
 
     h3 {

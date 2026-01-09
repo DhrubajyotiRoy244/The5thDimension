@@ -288,4 +288,23 @@ body {
     opacity: 1;
 }
 
-/* -------------------------------------EVENTS PAGE STYLING STARTS------------------------------------------------ */
+/* -------------------------------------TEAM PAGE STYLING STARTS------------------------------------------------ */
+
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid white;
+}
+.team .member{
+  border: 2px solid white;
+    margin: 25px;
+    width: auto;
+    overflow: hidden;
+    max-height: 415.5px;
+    
+}
+.team .member img{
+    width: 100%;
+    height: 100%;
+}
