@@ -1,0 +1,92 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Background (Same Robotics Theme) ===== */
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: #e5e7eb;
+    min-height: 100vh;
+    background-image: url('../project_background.jpg');
+}
+
+/* ===== Main Wrapper ===== */
+.team-page {
+    max-width: 1200px;
+    margin: 110px auto 80px;
+    padding: 0 20px;
+}
+
+/* ===== Page Title ===== */
+.team-page h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+/* ===== Team Grid ===== */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+/* ===== Member Card ===== */
+.member {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 28px 20px 32px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 40px rgba(0, 120, 255, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 60px rgba(0, 150, 255, 0.25);
+}
+
+/* ===== Role ===== */
+.member h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #93c5fd;
+    font-weight: 600;
+}
+
+/* ===== Member Image ===== */
+.member img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Name ===== */
+.member p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .team-page h1 {
+        font-size: 2.2rem;
+    }
+
+    .member img {
+        max-width: 160px;
+        height: 160px;
+    }
+}
