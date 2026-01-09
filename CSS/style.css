@@ -43,19 +43,23 @@
     list-style: none;
     transition: all 0.2s ease-in-out;
 }
-#navbar ul li:hover{
+
+#navbar ul li:hover {
     transform: scale(1.1);
 }
+
 #navbar ul li a {
     padding: 4px 18px;
     color: white;
     text-decoration: none;
 }
-#navbar ul li a:hover{
+
+#navbar ul li a:hover {
     text-decoration: underline;
     color: rgb(189, 189, 189);
     box-shadow: 2px 2px 6px teal;
 }
+
 .Contact-Links {
     display: flex;
     position: absolute;
@@ -80,7 +84,8 @@
     padding-right: 6px;
     transition: all 0.2s ease-in-out;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: black;
     color: white;
     cursor: pointer;
@@ -104,7 +109,8 @@
     left: 422px;
     transition: all 0.3s ease-in-out;
 }
-.hero::before{
+
+.hero::before {
     content: "";
     position: absolute;
     background-color: white;
@@ -115,17 +121,171 @@
     z-index: -1;
     opacity: 0.1;
 }
-.hero h1{
+
+.hero h1 {
     font-size: 40px;
 }
-.hero .content{
+
+.hero .content {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
 }
-.hero:hover{
+
+.hero:hover {
     transform: scale(1.1);
 }
-.h2_secondary{
+
+.h2_secondary {
     font-size: 33px;
 }
+
+/* PROJECT PAGE STYLING */
+body {
+    background-color:  #0B132B;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+#heading{
+    font-size: 4rem;
+    color: #4FC3F7;
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+    /* position: relative; */
+    /* top: 42px; */
+    margin-top: 58px;
+    margin-left: 547px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    width: 372px;
+    backdrop-filter: blur(8px);
+border: 1px solid rgba(0, 229, 255, 0.25);
+}
+#heading:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 20px red;
+}
+
+.projects-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 95vw;
+    row-gap: 74px;
+    /* border: 2px solid white; */
+    border-radius: 36px;
+    background-color: rgba(255,255,255,0.08);
+    padding: 56px;
+    padding-top: 83px;
+    margin: auto;
+    margin-top: 114px;
+}
+
+/* PROJECT CARD */
+.project {
+    position: relative;
+    height: 373px;
+    /* overflow: hidden; */
+    border-radius: 14px;
+    width: 426px;
+    margin: auto;
+}
+
+/* IMAGE */
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 36px;
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+/* DETAIL BOX */
+.detail::before{
+    content: "";
+    background-color: whitesmoke;
+    border-radius: 30px;
+    opacity: 0.18;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 91%;
+    /* background: rgba(0, 0, 0, 0.85); */
+    color: #fff;
+    padding: 20px;
+    border-radius: 11px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* HOVER EFFECT */
+.project:hover .project-img {
+    transform: translateX(-40%);
+}
+
+.project:hover .detail {
+    transform: translateX(45%);
+    opacity: 1;
+}
+
+/* 
+}
+
+.project {
+    display: block;
+    flex-direction: column;
+    border: 2px solid white;
+    box-sizing: border-box;
+    margin: 50px;
+    width: 367px;
+    /* align-items: center; */
+/* height: 300px;
+    margin: 38px auto;
+}
+
+.project-img {
+    width: 326px;
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    padding: 8px;
+    position: relative;
+    top: 1px;
+    transition: all 0.8s ease-in-out;
+}
+
+.detail {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 341px;
+    height: 262px;
+    position: relative;
+    top: -285px;
+    z-index: -1;
+    background-color: beige;
+    transition: all 0.8s ease-in-out;
+}
+
+/* .project:hover { */
+
+/* .project-img:hover {
+        .detail {
+            transform: translateX(100px);
+        }
+        transform: translateX(-100px);
+    } */
