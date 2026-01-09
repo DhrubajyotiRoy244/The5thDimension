@@ -142,9 +142,15 @@
 
 /* PROJECT PAGE STYLING */
 body {
-    background-color: #0B132B;
-    width: 100%;
-    height: 100%;
+    /* background-color: #0B132B; */
+    background-image: url('../project_background.jpg');
+    background-repeat: no-repeat;
+    width: auto;
+    min-height: 100vh;
+    /* object-fit: cover; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
     overflow-x: hidden;
 }
 
@@ -162,12 +168,12 @@ body {
     width: 372px;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(0, 229, 255, 0.25);
-    animation: pro 0.8s ease-in-out 0s 1 forwards;
+    box-shadow: 4px 4px 25px red;
 }
+
 
 #heading:hover {
     transform: scale(1.1);
-    box-shadow: 4px 4px 20px red;
 }
 
 .projects-page {
@@ -180,7 +186,7 @@ body {
     row-gap: 74px;
     /* border: 2px solid white; */
     border-radius: 36px;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.112);
     padding: 56px;
     padding-top: 83px;
     margin: auto;
