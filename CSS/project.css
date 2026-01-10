@@ -1,17 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html{
     scroll-behavior: smooth;
-}
-body {
-    background-image: url('../project_background.jpg');
-    background-repeat: no-repeat;
-    width: auto;
-    min-height: 100vh;
-    /* object-fit: cover; */
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    overflow-x: hidden;
-    color: white;
 }
 
 /* navbar styling */
@@ -27,20 +20,21 @@ body {
 
 #navbar .logo img {
     width: 184px;
-    margin-left: 83px;
+    margin-left: 94px;
 }
 
 #navbar .logo h1 {
-    font-size: 30px;
-    line-height: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    line-height: 58px;
 }
 
 #navbar ul {
     display: flex;
     width: 788px;
     justify-content: center;
-    margin-top: -55px;
-    margin-left: -50px;
+    margin-top: -60px;
+    margin-left: -17px;
 }
 
 #navbar ul li {
@@ -68,8 +62,8 @@ body {
 .Contact-Links {
     display: flex;
     position: absolute;
-    right: 0px;
-    margin-top: -73px;
+    right: 14px;
+    margin-top: -62px;
 }
 
 .Contact-Links li {
@@ -97,82 +91,106 @@ body {
     transform: scale(1.1);
 }
 
-/* BODY STYLING */
-
-.cap {
-    font-family: "Poppins", sans-serif;
-    font-size: 3rem;
-    color: #4FC3F7;
-    /* text-shadow: 0 0 12px rgba(0, 229, 255, 0.35); */
-    text-shadow: 2px 2px 15px crimson;
-    text-align: center;
-    width: 370px;
-    /* border: 2px solid white; */
-    margin-left: 247px;
+/* PROJECT PAGE STYLING */
+body {
+    /* background-color: #0B132B; */
+    background-image: url('../project_background.jpg');
+    background-repeat: no-repeat;
+    width: auto;
+    min-height: 100vh;
+    /* object-fit: cover; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    overflow-x: hidden;
+    /* max-width: 1200px; */
 }
 
-h2 {
+#heading {
     font-family: "Poppins", sans-serif;
-    font-size: 2.7rem;
-    text-align: center;
+    font-size: 4rem;
     color: #4FC3F7;
     text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+    /* position: relative; */
+    /* top: 42px; */
+    margin-top: 58px;
+    margin-left: 547px;
     border: 2px solid white;
     border-radius: 10px;
-    margin-top: 34px;
-    margin-left: 491px;
     text-align: center;
-    width: 494px;
-    padding: 7px;
+    width: 443px;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(0, 229, 255, 0.25);
-    box-shadow: 4px 4px 25px white;
-}
-
-
-h2:hover {
-    transform: scale(1.1);
     box-shadow: 4px 4px 25px red;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.112);
-    /* border: 2px solid white; */
-    border-radius: 36px;
-    padding: 4px;
-    justify-content: center;
-    margin: 45px auto;
+
+#heading:hover {
+    transform: scale(1.1);
 }
 
-.container .event {
-
-    width: 300px;
-    margin: 96px;
-    /* padding: 30px; */
-    /* border: 2px solid white; */
-    /* box-sizing: border-box; */
-    height: 280px;
-    /* transition: all 0.5s ease-in-out; */
-}
-
-.container .event h3 {
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    font-size: 1.7rem;
+.project .detail h2 {
+   font-family: "Poppins", sans-serif;
+    line-height: 63px;
+    font-size: 25px;
     color: white;
     text-shadow: 2px 2px 15px crimson;
-    transition: all 0.5s ease-in-out;
 }
 
-.container .event img {
+.projects-page {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 95vw;
+    row-gap: 74px;
+    /* border: 2px solid white; */
+    border-radius: 36px;
+    background-color: rgba(255, 255, 255, 0.112);
+    padding: 56px;
+    padding-top: 83px;
+    margin: auto;
+    margin-top: 114px;
+    justify-content: center;
+}
+
+/* PROJECT CARD */
+.project {
+    position: relative;
+    height: 373px;
+    /* overflow: hidden; */
+    border-radius: 14px;
+        width: 426px;
+    margin: auto 106px;
+    animation: pro 0.8s ease-in-out 0s 1 forwards;
+}
+
+@keyframes pro {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+
+}
+
+/* IMAGE */
+.project-img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: all 0.5s ease-in-out;
+    border-radius: 36px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
 }
 
-.container .event p::before {
+/* DETAIL BOX */
+.detail::before {
     content: "";
     background-color: whitesmoke;
     border-radius: 30px;
@@ -185,48 +203,36 @@ h2:hover {
     z-index: -1;
 }
 
-.container .event p {
-    /* border: 2px solid black; */
-    font-family: "Baloo Bhaijaan 2", sans-serif;
-    box-sizing: border-box;
-    min-height: 180px;
-    width: 100%;
-    padding: 6px;
-    position: relative;
-    top: -189px;
-    left: 9px;
-    z-index: -1;
+.detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 91%;
+    /* background: rgba(0, 0, 0, 0.85); */
+    color: #fff;
+    padding: 20px;
+    border-radius: 11px;
+    transform: translateX(100%);
+    opacity: 0;
+    word-spacing: 0.5rem;
     text-align: center;
-    justify-content: center;
-    display: flex;
     align-items: center;
-    flex-direction: column;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
 }
 
-/* .container .event p:hover{
-transform: rotate(360deg);
+.detail .para {
+    margin-top: 18px;
 }
-.container .event img:hover{
-   transform: rotate(360deg); 
-} */
-.container .event:hover {
-    img {
-        transform:
-            /*rotate(360deg)*/
-            translateY(-50%) scale(1.15);
-        /* transform: translateX(-40%); */
-    }
 
-    p {
-        transform:
-            /* rotate(-360deg)*/
-            translateY(65%) scale(1.15);
-    }
+/* HOVER EFFECT */
+.project:hover .project-img {
+    transform: translateX(-40%);
+}
 
-    h3 {
-        transform: translateY(-300%);
-    }
+.project:hover .detail {
+    transform: translateX(45%);
+    opacity: 1;
 }
 
 .foot {
@@ -234,9 +240,8 @@ transform: rotate(360deg);
     position: absolute;
     /* bottom: -386px; */
     width: 100%;
-    height: 290px;
+    height: 265px;
     color: white;
-    margin-left: -8px;
 }
 
 .foot #contact-us {
@@ -272,14 +277,6 @@ transform: rotate(360deg);
     content: "📍";
     font-size: 20px;
     margin-right: 6px;
-}
-
-.foot .footlogo h1 {
-    line-height: 0px;
-}
-
-.foot .footlogo p {
-    line-height: 0px;
 }
 
 .foot .footlogo {
