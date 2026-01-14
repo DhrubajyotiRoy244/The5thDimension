@@ -8,23 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.menu-icon{
-  width: 30px;
-  cursor: pointer;
-  position: absolute;
-  right: 30px;
-  top: 60px;
-  
-}
 
-.menu-icon span{
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: white;   /* change color if needed */
-  margin: 6px 0;
-  border-radius: 2px;
-}
 
 /* navbar styling */
 #navbar {
@@ -113,30 +97,35 @@ html{
 
 /* PROJECT PAGE STYLING */
 body {
-  font-family: "Segoe UI", sans-serif;
-  background-image: url('../project_background.jpg');
-  color: #e5e7eb;
-  min-height: 100vh;
+    /* background-color: #0B132B; */
+    background-image: url('../project_background.jpg');
+    background-repeat: no-repeat;
+    width: auto;
+    min-height: 100vh;
+    /* object-fit: cover; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    overflow-x: hidden;
+    /* max-width: 1200px; */
 }
-
 
 #heading {
     font-family: "Poppins", sans-serif;
     font-size: 4rem;
     color: #4FC3F7;
     text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+    /* position: relative; */
+    /* top: 42px; */
     margin-top: 58px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 547px;
     border: 2px solid white;
     border-radius: 10px;
     text-align: center;
     width: 443px;
-    max-width: 90%;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(0, 229, 255, 0.25);
     box-shadow: 4px 4px 25px red;
-    transition: transform 0.3s ease;
 }
 
 
@@ -302,4 +291,59 @@ body {
 
 .foot .footlogo img {
     width: 200px;
+}
+
+/* Top Right Menu */
+.top-menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 1000;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #ffffff;
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Dropdown Menu */
+.menu-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  width: 160px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.menu-dropdown a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.menu-dropdown a:hover {
+  background: #00bcd4;
+  color: #000;
+}
+
+/* Show Menu */
+.menu-dropdown.show {
+  display: flex;
 }

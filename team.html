@@ -11,13 +11,37 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 </head>
 
+<script>
+  function toggleMenu() {
+    document.getElementById("menuDropdown").classList.toggle("show");
+  }
+
+  // Close menu when clicking outside
+  window.addEventListener("click", function(e) {
+    const menu = document.getElementById("menuDropdown");
+    const hamburger = document.querySelector(".hamburger");
+    if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
+
 <body>
     <header>
-        <div class="menu-icon">
-            <span><a href="login.html"></a></span>
-            <span><a href="signup.html"></a></span>
-            <span><a href="#contact-us"></a></span>
-        </div>
+        <div class="top-menu">
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu-dropdown" id="menuDropdown">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="#contact-us">Contact Us</a>
+  </div>
+</div>
+        
         <nav id="navbar">
             <div class="logo">
                 <img src="nitp_robotics_logo.png" alt="NITP ROBOTICS LOGO">
@@ -27,15 +51,12 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="project.html">Projects</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="team.html"><u>Team</u></a></li>
+                <li><a href="team.html">Team</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">SignUp</a></li>
+                
             </ul>
-            <div class="Contact-Links">
-                <li><a href="#contact-us"><button class="btn">Contact Us</button></a></li>
-            </div>
+            
         </nav>
     </header>
 
