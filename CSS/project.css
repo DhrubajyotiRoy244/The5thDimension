@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -16,6 +17,7 @@ html{
     top: 0px;
     color: white;
     width: 100%;
+    text-shadow: 4px 4px 5px black;
 }
 
 #navbar .logo img {
@@ -131,7 +133,7 @@ body {
 
 .project .detail h2 {
    font-family: "Poppins", sans-serif;
-    line-height: 63px;
+    line-height: 45px;
     font-size: 25px;
     color: white;
     text-shadow: 2px 2px 15px crimson;
@@ -208,14 +210,14 @@ body {
     top: 0;
     right: 0;
     width: 60%;
-    height: 91%;
+    height: 373px;
     /* background: rgba(0, 0, 0, 0.85); */
     color: #fff;
     padding: 20px;
     border-radius: 11px;
     transform: translateX(100%);
     opacity: 0;
-    word-spacing: 0.5rem;
+    /* word-spacing: 0.5rem; */
     text-align: center;
     align-items: center;
     transition: all 0.5s ease;
@@ -288,3 +290,4 @@ body {
 .foot .footlogo img {
     width: 200px;
 }
+
