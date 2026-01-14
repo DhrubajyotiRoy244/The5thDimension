@@ -4,6 +4,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.menu-icon{
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  
+}
+
+.menu-icon span{
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;   /* change color if needed */
+  margin: 6px 0;
+  border-radius: 2px;
 }
 #navbar {
     font-family: "Poppins", sans-serif;
@@ -13,6 +32,7 @@
     top: 0px;
     color: white;
     width: 100%;
+    text-shadow: 4px 4px 5px black;
 }
 
 #navbar .logo img {
@@ -55,9 +75,39 @@
     color: rgb(189, 189, 189);
     box-shadow: 2px 2px 6px teal;
 }
+
 .Contact-Links {
-  position: relative;
+    display: flex;
+    position: absolute;
+    right: 14px;
+    margin-top: -62px;
 }
+
+.Contact-Links li {
+    list-style: none;
+}
+
+.Contact-Links li a {
+    margin: 4px 5px;
+}
+
+.btn {
+    color: black;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 
 
 body {
@@ -65,7 +115,12 @@ body {
   background-image: url("../project_background.jpg");
   color: #eaeaea;
   line-height: 1.7;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* background-position: center; */
 }
+
 
 .blogs-page {
   max-width: 1100px;
@@ -74,14 +129,30 @@ body {
 }
 
 .blogs-page h1 {
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-  letter-spacing: 1px;
-  color: #ffffff;
-  text-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+text-align: center;
+    font-weight: 700;
+    margin-bottom: 84px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-top: 106px;
+    margin-left: auto;
+    margin-right: auto;
+     font-size: 4rem;
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    box-shadow: 4px 4px 25px white;
+    width: fit-content;
+    padding-left: 37px;
+    padding-right: 37px;
+   
 }
+.blogs-page h1:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 25px crimson;
+}
+
 
 .blog {
   text-align: justify;
@@ -103,17 +174,19 @@ body {
   font-size: 1.8rem;
   margin-bottom: 15px;
   color: #ffffff;
+  text-align: center;
 }
 
 .blog h3 {
   font-size: 1.2rem;
   margin: 12px 0;
+  text-align: center;
   color: #00aaff;
 }
 
 .blog-img {
   display: block;
-  margin: 20px auto;
+  margin: 32px auto;
   border-radius: 14px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -128,6 +201,7 @@ body {
   font-size: 1rem;
   color: #d6d6d6;
   margin-top: 10px;
+  text-align: center;
 }
 
 .author {
@@ -149,4 +223,58 @@ body {
   .blog-img {
     width: 100% !important;
   }
+}
+
+.foot {
+    background-color: black;
+    position: absolute;
+    /* bottom: -386px; */
+    width: 100%;
+    height: 265px;
+    color: white;
+}
+
+.foot #contact-us {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border: 2px solid transparent;
+    box-shadow: 4px 4px 25px white;
+    width: 280px;
+    margin-left: 619px;
+    margin-top: 21px;
+    height: 69px;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.foot #contact-us li {
+    margin: 22px;
+}
+
+.foot #contact-us li a img {
+    width: 43px;
+    border-radius: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.foot #contact-us li a img:hover {
+    transform: scale(0.95);
+    box-shadow: 4px 4px 8px rgb(162, 114, 124);
+}
+
+.foot .footlogo p::before {
+    content: "📍";
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.foot .footlogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot .footlogo img {
+    width: 200px;
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -16,10 +17,23 @@ html {
     top: 0px;
     color: white;
     width: 100%;
+=======
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+#navbar {
+    flex-direction: column;
+>>>>>>> 791ba2166f798e0bd71000195ddbbc70d5cfc27a
 }
 
 #navbar .logo img {
     width: 184px;
+<<<<<<< HEAD
     margin-left: 94px;
 }
 
@@ -261,3 +275,53 @@ body {
 .foot .footlogo img {
     width: 200px;
 }
+=======
+    display: block;
+    margin: auto;
+}
+
+#navbar .logo h1 {
+    line-height: 0px;
+            position: relative;
+        top: 138px;
+        font-size: 2.8rem;
+}
+
+#navbar ul{
+           position: relative;
+        top: 91px;
+        left: 22px;
+}
+
+.team-page{
+
+}
+
+
+
+.team-page h1{
+    margin-top: 300px;
+
+}
+.team{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .team {
+    border-radius: 0;
+  }
+}
+
+>>>>>>> 791ba2166f798e0bd71000195ddbbc70d5cfc27a

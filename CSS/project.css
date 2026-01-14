@@ -1,10 +1,29 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
     scroll-behavior: smooth;
+}
+
+.menu-icon{
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  
+}
+
+.menu-icon span{
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;   /* change color if needed */
+  margin: 6px 0;
+  border-radius: 2px;
 }
 
 /* navbar styling */
@@ -16,6 +35,7 @@ html{
     top: 0px;
     color: white;
     width: 100%;
+    text-shadow: 4px 4px 5px black;
 }
 
 #navbar .logo img {
@@ -93,35 +113,30 @@ html{
 
 /* PROJECT PAGE STYLING */
 body {
-    /* background-color: #0B132B; */
-    background-image: url('../project_background.jpg');
-    background-repeat: no-repeat;
-    width: auto;
-    min-height: 100vh;
-    /* object-fit: cover; */
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    overflow-x: hidden;
-    /* max-width: 1200px; */
+  font-family: "Segoe UI", sans-serif;
+  background-image: url('../project_background.jpg');
+  color: #e5e7eb;
+  min-height: 100vh;
 }
+
 
 #heading {
     font-family: "Poppins", sans-serif;
     font-size: 4rem;
     color: #4FC3F7;
     text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
-    /* position: relative; */
-    /* top: 42px; */
     margin-top: 58px;
-    margin-left: 547px;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid white;
     border-radius: 10px;
     text-align: center;
     width: 443px;
+    max-width: 90%;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(0, 229, 255, 0.25);
     box-shadow: 4px 4px 25px red;
+    transition: transform 0.3s ease;
 }
 
 
@@ -131,7 +146,7 @@ body {
 
 .project .detail h2 {
    font-family: "Poppins", sans-serif;
-    line-height: 63px;
+    line-height: 45px;
     font-size: 25px;
     color: white;
     text-shadow: 2px 2px 15px crimson;
@@ -208,14 +223,14 @@ body {
     top: 0;
     right: 0;
     width: 60%;
-    height: 91%;
+    height: 373px;
     /* background: rgba(0, 0, 0, 0.85); */
     color: #fff;
     padding: 20px;
     border-radius: 11px;
     transform: translateX(100%);
     opacity: 0;
-    word-spacing: 0.5rem;
+    /* word-spacing: 0.5rem; */
     text-align: center;
     align-items: center;
     transition: all 0.5s ease;

@@ -1,47 +1,26 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-html{
-    scroll-behavior: smooth;
+
+body {
+    background-image: url('../project_background.jpg');
+    color: #ffffff;
+    min-height: 100vh;
 }
-html, body {
-    margin: 0;
-    padding: 0;
+
+
+header {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
 }
-.menu-icon{
-  width: 30px;
-  cursor: pointer;
-  position: absolute;
-  right: 30px;
-  top: 60px;
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-
-.menu-icon span{
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: white;   /* change color if needed */
-  margin: 6px 0;
-  border-radius: 2px;
-}
-
-
-.bg_video {
-    position: fixed;
-    /* overflow: hidden; */
-    top: 0px;
-    left: -219px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
 
 #navbar {
     font-family: "Poppins", sans-serif;
@@ -127,70 +106,86 @@ html, body {
     transform: scale(1.1);
 }
 
-/* HOME CONTENT STYLING */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    border: 2px transparent;
-    border-radius: 11px;
-    height: 250px;
-    width: 600px;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    top: 295px;
-    left: 481px;
-    transition: all 0.3s ease-in-out;
+
+.login-signup_heading {
+       text-align: center;
+    margin-top: 207px;
+    font-size: 3.5rem;
+    text-shadow: 0 0 15px rgba(79, 195, 247, 0.6);
+    margin-bottom: -181px;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    /* background-color: white; */
-    height: 250px;
-    top: 0px;
-    left: 0px;
+
+form {
+    width: 380px;
+    margin: 238px auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(79, 195, 247, 0.25);
+    p { 
+        text-align: center; }
+}
+
+label {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
     width: 100%;
-    /* z-index: -1; */
-    opacity: 0.46;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    z-index: -1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+   
 }
 
-.hero h1 {
-
-    font-size: 40px;
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #4fc3f7;
+    color: #031826;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(79, 195, 247, 0.8);
+    transition: transform 0.3s ease;
 }
 
-.hero .content {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-        text-shadow: 4px 3px 3px black;
-        position: relative;
-        z-index: 2;
+input[type="submit"]:hover {
+    transform: scale(1.03);
 }
 
-.hero:hover {
-    transform: scale(1.1);
+
+form+p,
+form+text {
+    text-align: center;
 }
 
-.h_secondary {
-    font-family: "Poppins", sans-serif;
-    font-size: 33px;
-        text-shadow: 4px 4px 8px black;
+a {
+    color: #4fc3f7;
+    text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 .foot {
-    bottom: 6px;
     background-color: black;
     position: absolute;
-    bottom: -386px;
+    bottom: -586px;
     width: 100%;
-    height: 265px;
+    height: 350px;
     color: white;
 }
 
@@ -203,7 +198,7 @@ html, body {
     width: 280px;
     margin-left: 619px;
     margin-top: 21px;
-    height: 69px;
+    height: 70px;
     align-items: center;
     border-radius: 12px;
 }
