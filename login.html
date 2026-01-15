@@ -4,9 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login | Robotics Club NIT Patna</title>
     <link rel="stylesheet" href="../CSS/login-signup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 </head>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menuDropdown").classList.toggle("show");
+  }
+
+  // Close menu when clicking outside
+  window.addEventListener("click", function(e) {
+    const menu = document.getElementById("menuDropdown");
+    const hamburger = document.querySelector(".hamburger");
+    if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
 
 <body>
   <header>
@@ -15,8 +31,25 @@
         <img src="nitp_robotics_logo.png" alt="NITP ROBOTICS LOGO">
         <h1>Robotics Club NIT Patna</h1>
       </div>
-      
-      
+      <div class="top-menu">
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-dropdown" id="menuDropdown">
+          <a href="index.html">Home</a>
+          <a href="project.html">Projects</a>
+          <a href="events.html">Events</a>
+          <a href="team.html">Team</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="#contact-us">Contact Us</a>
+        </div>
+      </div>
     </nav>
   </header>
     <h1 class="login-signup_heading">Log in</h1>
@@ -27,7 +60,7 @@
         <input type="password" id="password" name="password" required><br><br>
         <input type="submit" value="Log In">
         <p>
-        Already have an account? <a href="signup.html">Sign up</a>
+        Not a member  <a href="signup.html">Sign up</a>
         </p>
     </form>
 

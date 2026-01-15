@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Robotics Club NIT Patna</title>
-  <!-- <link rel="stylesheet" href="../CSS/project-responsive.css"> -->
   <link rel="stylesheet" href="../CSS/project.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 </head>
@@ -13,6 +12,12 @@
 <script>
   function toggleMenu() {
     document.getElementById("menuDropdown").classList.toggle("show");
+  }
+
+  function toggleNav() {
+    const navMenu = document.querySelector("#navbar ul");
+    navMenu.classList.toggle("show");
+    document.body.classList.toggle('nav-open');
   }
 
   // Close menu when clicking outside
@@ -23,11 +28,35 @@
       menu.classList.remove("show");
     }
   });
+
+  // Close nav menu when clicking a link
+  document.querySelectorAll("#navbar ul li a").forEach(link => {
+    link.addEventListener("click", function() {
+      document.querySelector("#navbar ul").classList.remove("show");
+    });
+  });
+
+  // Keyboard support for mobile nav hamburger
+  const mobileNavBtn = document.querySelector('.mobile-hamburger');
+  if (mobileNavBtn) {
+    mobileNavBtn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleNav();
+      }
+    });
+  }
 </script>
 
 <body>
   <header>
    
+  <!-- <div class="mobile-hamburger" onclick="toggleNav()" role="button" tabindex="0" aria-label="Open navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div> -->
+
   <div class="top-menu">
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
@@ -36,9 +65,18 @@
     </div>
 
     <div class="menu-dropdown" id="menuDropdown">
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
+      
+     
+       <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="events.html">Events</a>
+        <a href="team.html">Team</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="login.html">Login</a>
+         <a href="signup.html">Sign Up</a>
       <a href="#contact-us">Contact Us</a>
+       
     </div>
   </div>
 
@@ -55,7 +93,9 @@
         <li><a href="team.html">Team</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        
+        <li class="mobile-auth"><a href="login.html">Login</a></li>
+        <li class="mobile-auth"><a href="signup.html">Sign Up</a></li>
+        <li class="mobile-auth"><a href="#contact-us">Contact Us</a></li>
       </ul>
     
     </nav>

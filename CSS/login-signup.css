@@ -73,7 +73,65 @@ header {
     color: rgb(189, 189, 189);
     box-shadow: 2px 2px 6px teal;
 }
+.top-menu {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1001;
+}
 
+/* Left mobile hamburger to open main nav */
+.mobile-hamburger {
+  display: flex;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1002;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mobile-hamburger span { height: 3px; background: white; margin: 5px 0; display:block; border-radius:2px; }
+
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+}
+
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: black;
+  width: 180px;
+  border-radius: 8px;
+}
+
+.menu-dropdown a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-dropdown a:hover {
+  background: #00bcd4;
+  color: black;
+}
+
+.menu-dropdown.show {
+  display: block;
+}
 .Contact-Links {
     display: flex;
     position: absolute;
@@ -168,6 +226,8 @@ input[type="submit"]:hover {
 form+p,
 form+text {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
@@ -196,11 +256,13 @@ a:hover {
     border: 2px solid transparent;
     box-shadow: 4px 4px 25px white;
     width: 280px;
-    margin-left: 619px;
+    /* margin-left: 619px; */
     margin-top: 21px;
     height: 70px;
     align-items: center;
     border-radius: 12px;
+     margin-left: auto;
+    margin-right: auto;
 }
 
 .foot #contact-us li {
